@@ -19,10 +19,10 @@ now = datetime.datetime.now()
 date_str = datetime.datetime.strftime(now, '%Y-%m-%d')
 log_file = (str(log_directory_path) + '/' + date_str + '.log')
 
-pa = os.path.abspath(inspect.getframeinfo(inspect.stack()[-1][0])[0])
-pa = pa.split("/")[0: -1]
-pa = '/'.join(pa)
-print(pa)
+# pa = os.path.abspath(inspect.getframeinfo(inspect.stack()[-1][0])[0])
+# pa = pa.split("/")[0: -1]
+# pa = '/'.join(pa)
+# print(pa)
 
 # 创建文件和命令行的handler
 s_handler = logging.StreamHandler()
