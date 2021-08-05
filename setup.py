@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pygalaxy",
-    version="0.1.2",
+    version="0.1.4",
     author="patrickxu",
     author_email="patrickxu@wiatec.com",
     description="common package",
