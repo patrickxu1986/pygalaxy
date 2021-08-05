@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/pygalaxy/__init__.py
+src/pygalaxy.egg-info/PKG-INFO
+src/pygalaxy.egg-info/SOURCES.txt
+src/pygalaxy.egg-info/dependency_links.txt
+src/pygalaxy.egg-info/top_level.txt
+src/pygalaxy/logger/__init__.py
+src/pygalaxy/time_master/__init__.py

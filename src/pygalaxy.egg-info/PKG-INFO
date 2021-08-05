@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pygalaxy
+Version: 0.1.1
+Summary: common package
+Home-page: https://github.com/patrickxu1986/pygalaxy
+Author: patrickxu
+Author-email: patrickxu@wiatec.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/patrickxu1986/pygalaxy/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyGalaxy
+
+This is a simple common package. 
+
+Github: https://github.com/patrickxu1986/pygalaxy
+
