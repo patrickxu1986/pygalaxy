@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a860b47-9aa2-4664-a8ca-2756daecfebd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pygalaxy/consistent_hash/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pygalaxy.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/src/pygalaxy.egg-info/PKG-INFO" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,31 +34,31 @@
         <counts>
           <entry key="PKG-INFO" value="1" />
           <entry key="log" value="4" />
-          <entry key="md" value="2" />
-          <entry key="py" value="23" />
+          <entry key="md" value="3" />
+          <entry key="py" value="28" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Log" value="4" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="23" />
+          <entry key="Python" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="81" />
-          <entry key="py" value="3220" />
-          <entry key="txt" value="19" />
+          <entry key="md" value="141" />
+          <entry key="py" value="3223" />
+          <entry key="txt" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="76" />
-          <entry key="PLAIN_TEXT" value="19" />
-          <entry key="Python" value="3225" />
+          <entry key="Markdown" value="134" />
+          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="Python" value="3230" />
         </counts>
       </usages-collector>
     </session>
@@ -64,17 +66,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pygalaxy/consistent_hash/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
-              <folding>
-                <marker date="1628222405667" expanded="true" signature="84:1660" ph="..." />
-                <marker date="1628222405667" expanded="true" signature="1717:4310" ph="..." />
-                <marker date="1628222405667" expanded="true" signature="3033:3042" ph="..." />
-                <marker date="1628222405667" expanded="true" signature="3033:4310" ph="..." />
-                <marker date="1628222405667" expanded="true" signature="4310:4311" ph="..." />
-              </folding>
+            <state relative-caret-position="-215">
+              <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -100,12 +104,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/pygalaxy/logs/2021-08-05.log" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/pygalaxy/time_master/__init__.py" />
         <option value="$PROJECT_DIR$/src/pygalaxy/decimal_master/__init__.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/src/pygalaxy/logger/__init__.py" />
         <option value="$PROJECT_DIR$/src/pygalaxy/consistent_hash/__init__.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -151,6 +155,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
               <item name="consistent_hash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pygalaxy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
+              <item name="decimal_master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pygalaxy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
+              <item name="time_master" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -320,19 +338,26 @@
       <option name="project" value="LOCAL" />
       <updated>1628147373196</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="202108061200">
+      <created>1628222516128</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1628222516128</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1440" height="875" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32947233" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3127413" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3127413" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -361,7 +386,8 @@
     <MESSAGE value="202108051400" />
     <MESSAGE value="202108051401" />
     <MESSAGE value="202108051510" />
-    <option name="LAST_COMMIT_MESSAGE" value="202108051510" />
+    <MESSAGE value="202108061200" />
+    <option name="LAST_COMMIT_MESSAGE" value="202108061200" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/pygalaxy.egg-info/PKG-INFO">
@@ -396,37 +422,10 @@
     <entry file="file://$PROJECT_DIR$/src/pygalaxy/logs/2021-08-05.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="285">
-            <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/Cellar/python@3.9/3.9.6/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_pydecimal.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
           <caret line="2535" column="25" selection-start-line="2535" selection-start-column="25" selection-end-line="2535" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pygalaxy/time_master/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="e#47#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pygalaxy/decimal_master/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -440,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-354914649/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -454,17 +446,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pygalaxy/time_master/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="e#47#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pygalaxy/decimal_master/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pygalaxy/consistent_hash/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
-          <folding>
-            <marker date="1628222405667" expanded="true" signature="84:1660" ph="..." />
-            <marker date="1628222405667" expanded="true" signature="1717:4310" ph="..." />
-            <marker date="1628222405667" expanded="true" signature="3033:3042" ph="..." />
-            <marker date="1628222405667" expanded="true" signature="3033:4310" ph="..." />
-            <marker date="1628222405667" expanded="true" signature="4310:4311" ph="..." />
-          </folding>
+        <state relative-caret-position="-215">
+          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
