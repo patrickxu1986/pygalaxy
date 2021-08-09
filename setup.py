@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pygalaxy",
-    version="0.2.5",
+    version="0.2.6",
     author="patrickxu",
     author_email="patrickxu@wiatec.com",
     description="common package",
@@ -17,6 +17,11 @@ setuptools.setup(
     project_urls={
         "Bug Tracker": "https://github.com/patrickxu1986/pygalaxy/issues",
     },
+    install_requires=[
+        'pycryptodome>=3.10.1',
+        'pymysql>=1.0.2',
+        'PyJWT>=2.1.0',
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -25,6 +30,7 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
+
 )
 
 # deploy.sh project to pypi

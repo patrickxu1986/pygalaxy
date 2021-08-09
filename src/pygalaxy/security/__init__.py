@@ -77,6 +77,7 @@ class JwtMater(object):
             "sub": subject,
             "iss": issuer,
             "iat": datetime.utcnow(),
+            "nbf": datetime.utcnow(),
             "exp": datetime.utcnow() + timedelta(days=expires_days),
         }
         return jwt.encode(payload=payload, key=JWT_SECRET, algorithm="HS256")
