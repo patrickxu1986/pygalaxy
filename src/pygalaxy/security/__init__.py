@@ -32,7 +32,7 @@ class AesMaster:
         key = str(hashlib.md5(key.encode(ENCODING)).hexdigest()).encode(encoding=ENCODING)
         cipher = AES.new(key, AES.MODE_CBC, iv=AES_IV.encode(encoding=ENCODING))
         encrypt_bytes = cipher.encrypt(raw.encode(ENCODING))
-        return str(binascii.b2a_hex(encrypt_bytes).decode(ENCODING)).upper()
+        return str(binascii.b2a_hex(encrypt_bytes).decode(ENCODING))
 
     @staticmethod
     def decrypt(source: str, key: str = AES_DEFAULT_KEY):
@@ -67,14 +67,14 @@ class JwtMater(object):
         return jwt.encode(payload=payload, key=JWT_SECRET, algorithm="HS256")
 
     @staticmethod
-    def decrypt(token: str):
+    def decrypt(token_str: str):
         """
         解密JWT token
-        :param token:    jwt token
+        :param token_str:    jwt token
         :return: 返回token中包含的payload字典
-            {'sub': 'auth', 'iss': 'ex', 'iat': 1628496462, 'exp': 1629101262}
+            {'sub': 'auth', 'iss': 'ex', 'iat': 1628499184, 'nbf': 1628499184, 'exp': 1629103984}
         """
-        return jwt.decode(token, JWT_SECRET, algorithms=['HS256'])
+        return jwt.decode(token_str, JWT_SECRET, algorithms=['HS256'])
 
 
 if __name__ == '__main__':
