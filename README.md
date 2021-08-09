@@ -21,7 +21,7 @@ logger.debug('log message')
 logger.info('log message') 
 ```
 
--  time_master
+-  time
 
 ```python
 from pygalaxy import time_master
@@ -30,7 +30,7 @@ time_master.get_current_date_str()
 time_master.get_current_unix_time()
 ```
 
--  consistent hash
+-  ConsistentHash
 
 ```python
 from pygalaxy.consistent_hash import Node, ConsistentHash
@@ -42,7 +42,7 @@ n = consistent_hash.get_node('test content')
 
 ```
 
--  aes master
+-  AES encrypt&decrypt
 
 ```python
 from pygalaxy.aes_master import AesMaster
