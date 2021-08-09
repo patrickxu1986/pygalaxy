@@ -3,7 +3,7 @@
 import pymysql
 
 
-class SQLConnection(object):
+class SQLMaster(object):
 
     def __init__(self, host: str, user: str, password: str, db: str, port: int = 3306):
         """
@@ -17,9 +17,9 @@ class SQLConnection(object):
         try:
             self.connection = pymysql.connect(host=host, port=port, user=user, passwd=password, db=db, charset='utf8')
             self.cursor = self.connection.cursor()
-            print('mysql database [%s] connect success...' % db)
+            print('[SQLMaster] - mysql database [%s] connect success...' % db)
         except Exception as e:
-            print('mysql database [%s] connect failure...' % db)
+            print('[SQLMaster] - mysql database [%s] connect failure...' % db)
             print(repr(e))
 
     def close(self):
@@ -39,20 +39,20 @@ class SQLConnection(object):
             with self.cursor as cursor:
                 cursor.execute(sql)
             self.connection.commit()
-            print("[%s] execute success..." % sql)
+            print("[SQLMaster] - [%s] execute success..." % sql)
             return True
         except Exception as e:
-            print("[%s] execute failure..." % sql)
-            print(repr(e))
+            print("[SQLMaster] - [%s] execute failure..." % sql)
+            print("[SQLMaster] - %s" % repr(e))
             return False
         finally:
             self.close()
 
     def fetch(self, sql: str):
         """
-        执行查询操作
+        执行结果查询操作
         :param sql: sql语句
-        :return: 查询成功返回结果列表，列表中的每一个item也是一个列表，读取数据时按index读取
+        :return: 查询成功返回结果元组，元组中的每一个item也是一个元组，读取数据时按index读取
                 例如：
                     for row in rows:
                         id = row[0]
@@ -61,11 +61,14 @@ class SQLConnection(object):
             with self.cursor as cursor:
                 cursor.execute(sql)
                 result_rows = cursor.fetchall()
-            print("[%s] execute success..." % sql)
+            if result_rows is None or len(result_rows) <= 0:
+                print("[SQLMaster] - [%s] execute failure... no result found" % sql)
+                return None
+            print("[SQLMaster] - [%s] execute success..." % sql)
             return result_rows
         except Exception as e:
-            print("[%s] execute failure..." % sql)
-            print(repr(e))
+            print("[SQLMaster] - [%s] execute failure..." % sql)
+            print("[SQLMaster] - %s" % repr(e))
             return None
         finally:
             self.close()

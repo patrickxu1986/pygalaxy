@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pygalaxy",
-    version="0.1.9",
+    version="0.2.4",
     author="patrickxu",
     author_email="patrickxu@wiatec.com",
     description="common package",
@@ -27,7 +27,7 @@ setuptools.setup(
     python_requires=">=3.6",
 )
 
-# deploy project to pypi
+# deploy.sh project to pypi
 # pip3 install --upgrade build
 # python3 -m build
 # pip3 install --upgrade twine

@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a860b47-9aa2-4664-a8ca-2756daecfebd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pygalaxy.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/src/pygalaxy.egg-info/PKG-INFO" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pygalaxy/sql_master/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pygalaxy/sql_master/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,9 +49,10 @@
         <counts>
           <entry key="LICENSE" value="1" />
           <entry key="PKG-INFO" value="1" />
+          <entry key="deploy" value="1" />
           <entry key="log" value="6" />
           <entry key="md" value="7" />
-          <entry key="py" value="44" />
+          <entry key="py" value="48" />
           <entry key="pyi" value="1" />
           <entry key="txt" value="5" />
         </counts>
@@ -56,25 +61,27 @@
         <counts>
           <entry key="Log" value="6" />
           <entry key="Markdown" value="7" />
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="44" />
+          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="Python" value="48" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="33" />
-          <entry key="dummy" value="21" />
+          <entry key="dummy" value="27" />
           <entry key="md" value="279" />
-          <entry key="py" value="4729" />
-          <entry key="txt" value="56" />
+          <entry key="py" value="4838" />
+          <entry key="sh" value="3" />
+          <entry key="txt" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="Bash" value="3" />
           <entry key="Markdown" value="271" />
-          <entry key="PLAIN_TEXT" value="77" />
-          <entry key="Python" value="4770" />
+          <entry key="PLAIN_TEXT" value="84" />
+          <entry key="Python" value="4879" />
         </counts>
       </usages-collector>
     </session>
@@ -84,8 +91,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pygalaxy/sql_master/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="1095">
+              <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -117,10 +133,11 @@
         <option value="$PROJECT_DIR$/src/pygalaxy/decimal_master/__init__.py" />
         <option value="$PROJECT_DIR$/src/pygalaxy/aes/__init__.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/src/pygalaxy/aes_master/__init__.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/src/pygalaxy/sql_master/__init__.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/deploy.sh" />
       </list>
     </option>
   </component>
@@ -158,34 +175,6 @@
               <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pygalaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="aes_master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pygalaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="consistent_hash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pygalaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="logger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pygalaxy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pygalaxy" type="462c0819:PsiDirectoryNode" />
-              <item name="sql_master" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -338,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628491829968</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="202108091452">
+      <created>1628491955124</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1628491955124</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -359,7 +355,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32947233" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32947233" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32947233" />
       <window_info anchor="bottom" id="Tail" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -387,7 +383,8 @@
     <MESSAGE value="202108091405" />
     <MESSAGE value="202108091443" />
     <MESSAGE value="202108091450" />
-    <option name="LAST_COMMIT_MESSAGE" value="202108091450" />
+    <MESSAGE value="202108091452" />
+    <option name="LAST_COMMIT_MESSAGE" value="202108091452" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/pygalaxy.egg-info/PKG-INFO">
@@ -495,13 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../virtualenv/pygalaxy/lib/python3.9/site-packages/Crypto/Cipher/AES.pyi">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -537,10 +527,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../virtualenv/pygalaxy/lib/python3.9/site-packages/pymysql/cursors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="261" column="8" selection-start-line="261" selection-start-column="8" selection-end-line="261" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="50" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pygalaxy/sql_master/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="1095">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
         </state>
       </provider>
     </entry>
