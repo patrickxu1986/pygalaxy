@@ -126,7 +126,7 @@ class ConsistentHash(object):
 
     def get_nodes(self):
         """
-        获取hash中的所有节点
+        获取hash环中的所有节点
         """
         node_list = []
         if self._node_dict and len(self._node_dict) > 0:
@@ -135,11 +135,29 @@ class ConsistentHash(object):
                 node_list.append(node)
         return node_list
 
+    def get_sored_nodes(self):
+        """
+        获取排好序的hash环中的所有节点
+        """
+        node_list = []
+        if self._hash_ring and len(self._hash_ring) > 0:
+            for key in self._hash_ring:
+                node = self._node_dict[key]
+                node_list.append(node)
+        return node_list
+
 
 if __name__ == '__main__':
     consistent_hash = ConsistentHash()
-    consistent_hash.add_node(Node('192.168.1.124'))
-    consistent_hash.add_node(Node('192.168.1.125'))
-    consistent_hash.add_node(Node('192.168.1.126'))
-    n = consistent_hash.get_node('resource name')
+    consistent_hash.add_node(Node(node_name='server1', node_value='192.168.1.121'))
+    consistent_hash.add_node(Node(node_name='server2', node_value='192.168.1.122'))
+    consistent_hash.add_node(Node(node_name='server3', node_value='192.168.1.123'))
+    consistent_hash.add_node(Node(node_name='server4', node_value='192.168.1.124'))
+    consistent_hash.add_node(Node(node_name='server5', node_value='192.168.1.125'))
+    consistent_hash.add_node(Node(node_name='server6', node_value='192.168.1.126'))
+    consistent_hash.add_node(Node(node_name='server7', node_value='192.168.1.127'))
+    consistent_hash.add_node(Node(node_name='server8', node_value='192.168.1.128'))
+    consistent_hash.add_node(Node(node_name='server9', node_value='192.168.1.128'))
+    consistent_hash.add_node(Node(node_name='server10', node_value='192.168.1.128'))
+    n = consistent_hash.get_node('this is resource name')
     print(n)

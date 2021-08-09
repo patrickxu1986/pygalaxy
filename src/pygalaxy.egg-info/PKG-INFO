@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pygalaxy
-Version: 0.1.6
+Version: 0.1.7
 Summary: common package
 Home-page: https://github.com/patrickxu1986/pygalaxy
 Author: patrickxu
@@ -20,6 +20,14 @@ License-File: LICENSE
 This is a simple common package. 
 
 Github: https://github.com/patrickxu1986/pygalaxy
+
+#### Dependence
+
+```python
+pip3 install pycryptodome
+```
+
+#### Use
 
 -  logger
 

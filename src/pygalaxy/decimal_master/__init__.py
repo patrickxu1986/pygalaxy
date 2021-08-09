@@ -11,14 +11,17 @@ def round_half_up(source, fraction_digits: int = 2):
     """
     # 小数点后保留几位小数
     fmt = '%.' + str(fraction_digits) + 'f'
-    # 四舍五入到的位数, 0 -> 到整数位， 0.0 -> 到小数点第一位, 0.00 -> 到小数点第二位
-    deci = '0'
+    # 四舍五入到的位数:
+    # 0 -> 到整数位
+    # 0.0 -> 到小数点第一位
+    # 0.00 -> 到小数点第二位
+    fraction = '0'
     for i in range(fraction_digits):
-        if '.' in deci:
-            deci += '0'
+        if '.' in fraction:
+            fraction += '0'
         else:
-            deci += '.0'
-    result = fmt % (Decimal(str(source)).quantize(Decimal(deci), ROUND_HALF_UP))
+            fraction += '.0'
+    result = fmt % (Decimal(str(source)).quantize(Decimal(fraction), ROUND_HALF_UP))
     return result
 
 
