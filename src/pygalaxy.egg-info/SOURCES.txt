@@ -10,4 +10,5 @@ src/pygalaxy/aes_master/__init__.py
 src/pygalaxy/consistent_hash/__init__.py
 src/pygalaxy/decimal_master/__init__.py
 src/pygalaxy/logger/__init__.py
+src/pygalaxy/sql_master/__init__.py
 src/pygalaxy/time_master/__init__.py
