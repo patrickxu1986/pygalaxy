@@ -37,8 +37,8 @@ class Node(object):
         result = result.hexdigest()
         return result
 
-    @staticmethod
-    def generate_series_number(hash_value: str):
+    @classmethod
+    def generate_series_number(cls, hash_value: str):
         """
         通过取模计算节点hash值在hash环上的位置
         """
@@ -137,4 +137,9 @@ class ConsistentHash(object):
 
 
 if __name__ == '__main__':
-    pass
+    consistent_hash = ConsistentHash()
+    consistent_hash.add_node(Node('192.168.1.124'))
+    consistent_hash.add_node(Node('192.168.1.125'))
+    consistent_hash.add_node(Node('192.168.1.126'))
+    n = consistent_hash.get_node('resource name')
+    print(n)
