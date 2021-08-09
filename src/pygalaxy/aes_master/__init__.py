@@ -4,7 +4,7 @@ from Crypto.Cipher import AES
 import hashlib
 import binascii
 
-VIPARA = "#fsi&3)f23&fsf%!"
+IV = "#fsi&3)f23&fsf%!"
 ENCODING = "utf-8"
 DEFAULT_KEY = "www.wiatec.com"
 
@@ -37,7 +37,7 @@ class AesMaster:
         """
         raw = AesMaster.__pad(source)
         key = str(hashlib.md5(str(key).encode(ENCODING)).hexdigest()).encode(encoding=ENCODING)
-        cipher = AES.new(key, AES.MODE_CBC, iv=VIPARA.encode(encoding=ENCODING))
+        cipher = AES.new(key, AES.MODE_CBC, iv=IV.encode(encoding=ENCODING))
         result = cipher.encrypt(raw.encode(ENCODING))
         return AesMaster.__bytes2hex(result)
 
@@ -48,7 +48,7 @@ class AesMaster:
         """
         enc = binascii.a2b_hex(source)
         key = str(hashlib.md5(str(key).encode(ENCODING)).hexdigest()).encode(encoding=ENCODING)
-        cipher = AES.new(key, AES.MODE_CBC, iv=VIPARA.encode(encoding=ENCODING))
+        cipher = AES.new(key, AES.MODE_CBC, iv=IV.encode(encoding=ENCODING))
         result = cipher.decrypt(enc)
         return str(result.decode(ENCODING)).replace('\n', '')
 
