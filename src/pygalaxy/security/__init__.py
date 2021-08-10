@@ -46,13 +46,13 @@ class AesMaster:
         return str(decrypt_bytes.decode(ENCODING)).replace('\n', '')
 
 
-class JwtMater(object):
+class JwtMaster(object):
 
     @staticmethod
     def encrypt(expires_days: int=7, issuer: str=JWT_DEFAULT_ISSUER, subject: str=JWT_DEFAULT_SUBJECT):
         """
         加密生成JWT token
-        :param expires_days:   token过期时间
+        :param expires_days:   token过期天数
         :param issuer:         token发行者
         :param subject:        token主题
         :return:   token字符串
@@ -82,8 +82,8 @@ if __name__ == '__main__':
     print(encrypt)
     decrypt = AesMaster.decrypt(encrypt, key='this is a key')
     print(decrypt)
-    token = JwtMater.encrypt()
+    token = JwtMaster.encrypt()
     print(token)
-    result = JwtMater.decrypt(token)
+    result = JwtMaster.decrypt(token)
     print(result)
 
