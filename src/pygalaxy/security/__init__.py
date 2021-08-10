@@ -8,8 +8,8 @@ from datetime import datetime, timedelta
 
 
 ENCODING = "utf-8"
-AES_IV = "#fsi&3)f23&fsf%!"
-AES_DEFAULT_KEY = "www.wiatec.com"
+AES_IV = "2018071119861008"
+AES_DEFAULT_KEY = "&h24*3)u6@m#,1p~7k&/q!=6h^l*"
 
 JWT_DEFAULT_ISSUER = "ex"
 JWT_DEFAULT_SUBJECT = "auth"
@@ -78,9 +78,9 @@ class JwtMaster(object):
 
 
 if __name__ == '__main__':
-    encrypt = AesMaster.encrypt('test content', key='this is a key')
+    encrypt = AesMaster.encrypt('test content')
     print(encrypt)
-    decrypt = AesMaster.decrypt(encrypt, key='this is a key')
+    decrypt = AesMaster.decrypt(encrypt)
     print(decrypt)
     token = JwtMaster.encrypt()
     print(token)
