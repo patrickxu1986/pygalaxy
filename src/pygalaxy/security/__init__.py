@@ -21,7 +21,7 @@ JWT_SECRET = "#hhjkhkh&jh2432@ndsf*_erkhwek234&ewhkjwehr^hfh234$2l3j4o32urMiOiJ3
 class AesMaster:
 
     @staticmethod
-    def encrypt(source: str, key: str = AES_DEFAULT_KEY):
+    def encrypt(source: str, key: str=AES_DEFAULT_KEY):
         """
         加密
         """
@@ -35,7 +35,7 @@ class AesMaster:
         return str(binascii.b2a_hex(encrypt_bytes).decode(ENCODING))
 
     @staticmethod
-    def decrypt(source: str, key: str = AES_DEFAULT_KEY):
+    def decrypt(source: str, key: str=AES_DEFAULT_KEY):
         """
         解密
         """
@@ -86,4 +86,3 @@ if __name__ == '__main__':
     print(token)
     result = JwtMaster.decrypt(token)
     print(result)
-
