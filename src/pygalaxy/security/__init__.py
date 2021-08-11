@@ -55,7 +55,7 @@ class JwtMaster(object):
         :param expires_days:   token过期天数
         :param issuer:         token发行者
         :param subject:        token主题
-        :return:   token字符串
+        :return:               token字符串
         """
         payload = {
             "sub": subject,
@@ -70,9 +70,9 @@ class JwtMaster(object):
     def decrypt(token_str: str):
         """
         解密JWT token
-        :param token_str:    jwt token
-        :return: 返回token中包含的payload字典
-            {'sub': 'auth', 'iss': 'ex', 'iat': 1628499184, 'nbf': 1628499184, 'exp': 1629103984}
+        :param token_str:      jwt token
+        :return:               返回token中包含的payload字典
+                               {'sub': 'auth', 'iss': 'ex', 'iat': 1628499184, 'nbf': 1628499184, 'exp': 1629103984}
         """
         return jwt.decode(token_str, JWT_SECRET, algorithms=['HS256'])
 
