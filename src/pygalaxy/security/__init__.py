@@ -72,7 +72,7 @@ class JwtMaster(object):
         解密JWT token
         :param token_str:      jwt token
         :return:               返回token中包含的payload字典
-                               {'sub': 'auth', 'iss': 'ex', 'iat': 1628499184, 'nbf': 1628499184, 'exp': 1629103984}
+                                    {'sub': 'auth', 'iss': 'ex', 'iat': 1628499184, 'nbf': 1628499184, 'exp': 1629103984}
         """
         return jwt.decode(token_str, JWT_SECRET, algorithms=['HS256'])
 

@@ -10,9 +10,9 @@ class Node(object):
     def __init__(self, node_name: str, node_value: str=None):
         """
         初始化节点
-        name: 节点名称, 需要保持唯一性
-        value: 节点对应的实际值，用于在虚拟节点中获取实际需要的值
-        series_number: 通过hash及取模计算node在hash环上的序列号
+        name:                  节点名称, 需要保持唯一性
+        value:                 节点对应的实际值，用于在虚拟节点中获取实际需要的值
+        series_number:         通过hash及取模计算node在hash环上的序列号
         """
         self.name = node_name
         if node_value is None:
@@ -66,8 +66,8 @@ class ConsistentHash(object):
         """
         初始化
         _virtual_node_numbers: 每个节点需要映射的虚拟节点数
-        _node_dict: 存放节点series值与node的对应关系, key是节点的series number, value为节点
-        _hash_ring: 用于存放所有的节点的series number，需要保持排序
+        _node_dict:            存放节点series值与node的对应关系, key是节点的series number, value为节点
+        _hash_ring:            用于存放所有的节点的series number，需要保持排序
         """
         self._virtual_node_numbers = virtual_node_numbers
         self._node_dict = dict()
