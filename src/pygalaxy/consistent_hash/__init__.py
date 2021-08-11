@@ -11,7 +11,7 @@ class Node(object):
         """
         初始化节点
         name:                  节点名称, 需要保持唯一性
-        value:                 节点对应的实际值，用于在虚拟节点中获取实际需要的值
+        value:                 节点对应的实际值，用于在虚拟节点中获取实际需要的值，一般是服务器ip
         series_number:         通过hash及取模计算node在hash环上的序列号
         """
         self.name = node_name
@@ -62,7 +62,7 @@ class ConsistentHash(object):
     """
     一致性hash
     """
-    def __init__(self, virtual_node_numbers=5):
+    def __init__(self, virtual_node_numbers=15):
         """
         初始化
         _virtual_node_numbers: 每个节点需要映射的虚拟节点数
