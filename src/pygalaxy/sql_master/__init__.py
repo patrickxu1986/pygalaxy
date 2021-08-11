@@ -15,8 +15,8 @@ class SQLMaster(object):
         :param port:           数据库连接端口，默认3306
         """
         try:
+            self.db = db
             self.connection = pymysql.connect(host=host, port=port, user=user, passwd=password, db=db, charset='utf8')
-            self.cursor = self.connection.cursor()
             print('[SQLMaster] - mysql database [%s] connect success...' % db)
         except Exception as e:
             print('[SQLMaster] - mysql database [%s] connect failure...' % db)
@@ -26,8 +26,13 @@ class SQLMaster(object):
         """
         关闭数据库连接
         """
-        self.cursor.close()
-        self.connection.close()
+        try:
+            if self.connection:
+                self.connection.close()
+            print('[SQLMaster] - mysql database [%s] closed success...' % self.db)
+        except Exception as e:
+            print('[SQLMaster] - mysql database [%s] closed failure...' % self.db)
+            print(repr(e))
 
     def execute(self, sql: str):
         """
@@ -35,18 +40,19 @@ class SQLMaster(object):
         :param sql:            sql语句
         :return:               返回执行是否成功的bool
         """
-        try:
-            with self.cursor as cursor:
+        with self.connection.cursor() as cursor:
+            try:
                 cursor.execute(sql)
-            self.connection.commit()
-            print("[SQLMaster] - [%s] execute success..." % sql)
-            return True
-        except Exception as e:
-            print("[SQLMaster] - [%s] execute failure..." % sql)
-            print("[SQLMaster] - %s" % repr(e))
-            return False
-        finally:
-            self.close()
+                self.connection.commit()
+                print("[SQLMaster] - [%s] execute success..." % sql)
+                return True
+            except Exception as e:
+                print("[SQLMaster] - [%s] execute failure..." % sql)
+                print("[SQLMaster] - %s" % repr(e))
+                return False
+            finally:
+                if cursor:
+                    cursor.close()
 
     def fetch(self, sql: str):
         """
@@ -57,22 +63,26 @@ class SQLMaster(object):
                                     for row in rows:
                                         id = row[0]
         """
-        try:
-            with self.cursor as cursor:
+        with self.connection.cursor() as cursor:
+            try:
                 cursor.execute(sql)
                 result_rows = cursor.fetchall()
-            if result_rows is None or len(result_rows) <= 0:
-                print("[SQLMaster] - [%s] execute failure... no result found" % sql)
+                if result_rows is None or len(result_rows) <= 0:
+                    print("[SQLMaster] - [%s] execute failure... no result found" % sql)
+                    return None
+                print("[SQLMaster] - [%s] execute success..." % sql)
+                return result_rows
+            except Exception as e:
+                print("[SQLMaster] - [%s] execute failure..." % sql)
+                print("[SQLMaster] - %s" % repr(e))
                 return None
-            print("[SQLMaster] - [%s] execute success..." % sql)
-            return result_rows
-        except Exception as e:
-            print("[SQLMaster] - [%s] execute failure..." % sql)
-            print("[SQLMaster] - %s" % repr(e))
-            return None
-        finally:
-            self.close()
+            finally:
+                if cursor:
+                    cursor.close()
 
 
 if __name__ == '__main__':
-    pass
+    connection = SQLMaster(host='localhost', user='root', password='xx', db='wiatec_movie')
+    connection.execute('UPDATE m_video SET title = "1123" WHERE id = 2')
+    connection.fetch(sql='SELECT * FROM m_video WHERE id > 0')
+    connection.close()
