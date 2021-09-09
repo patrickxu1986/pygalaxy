@@ -44,15 +44,16 @@ class SQLMaster(object):
             try:
                 cursor.execute(sql)
                 self.connection.commit()
-                print("[SQLMaster] - [%s] execute success..." % sql)
+                print("[SQLMaster] - execute success... [%s]" % sql)
                 return True
             except Exception as e:
-                print("[SQLMaster] - [%s] execute failure..." % sql)
+                print("[SQLMaster] - execute failure... [%s]" % sql)
                 print("[SQLMaster] - %s" % repr(e))
                 return False
             finally:
-                if cursor:
-                    cursor.close()
+                pass
+                # if cursor:
+                #     cursor.close()
 
     def fetch(self, sql: str):
         """
@@ -68,17 +69,18 @@ class SQLMaster(object):
                 cursor.execute(sql)
                 result_rows = cursor.fetchall()
                 if result_rows is None or len(result_rows) <= 0:
-                    print("[SQLMaster] - [%s] execute failure... no result found" % sql)
+                    print("[SQLMaster] - execute failure... [%s] no result found" % sql)
                     return None
-                print("[SQLMaster] - [%s] execute success..." % sql)
+                print("[SQLMaster] - execute success... [%s]" % sql)
                 return result_rows
             except Exception as e:
-                print("[SQLMaster] - [%s] execute failure..." % sql)
+                print("[SQLMaster] - execute failure... [%s]" % sql)
                 print("[SQLMaster] - %s" % repr(e))
                 return None
             finally:
-                if cursor:
-                    cursor.close()
+                pass
+                # if cursor:
+                #     cursor.close()
 
 
 if __name__ == '__main__':
