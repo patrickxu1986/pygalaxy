@@ -18,10 +18,18 @@ JWT_SECRET = "#hhjkhkh&jh2432@ndsf*_erkhwek234&ewhkjwehr^hfh234$2l3j4o32urMiOiJ3
              "WIiOiJsZWdhY3kiLCJuYmYiOjE1MjAyNjQ0MjksImV4cCI6MTUyMDM1MD2l3j4o3"
 
 
+def md5(source: str):
+    return hashlib.md5(source.encode(ENCODING)).hexdigest()
+
+
+def md5_16(source: str):
+    return hashlib.md5(source.encode(ENCODING)).hexdigest()[8: 24]
+
+
 class AesMaster:
 
     @staticmethod
-    def encrypt(source: str, key: str=AES_DEFAULT_KEY):
+    def encrypt(source: str, key: str=AES_DEFAULT_KEY, iv: str=AES_IV):
         """
         加密
         """
@@ -30,18 +38,18 @@ class AesMaster:
             amount_to_pad = AES.block_size
         raw = source + chr(amount_to_pad) * amount_to_pad
         key = str(hashlib.md5(key.encode(ENCODING)).hexdigest()).encode(encoding=ENCODING)
-        cipher = AES.new(key, AES.MODE_CBC, iv=AES_IV.encode(encoding=ENCODING))
+        cipher = AES.new(key, AES.MODE_CBC, iv=iv.encode(encoding=ENCODING))
         encrypt_bytes = cipher.encrypt(raw.encode(ENCODING))
         return str(binascii.b2a_hex(encrypt_bytes).decode(ENCODING))
 
     @staticmethod
-    def decrypt(source: str, key: str=AES_DEFAULT_KEY):
+    def decrypt(source: str, key: str=AES_DEFAULT_KEY, iv: str=AES_IV):
         """
         解密
         """
         enc = binascii.a2b_hex(source)
         key = str(hashlib.md5(str(key).encode(ENCODING)).hexdigest()).encode(encoding=ENCODING)
-        cipher = AES.new(key, AES.MODE_CBC, iv=AES_IV.encode(encoding=ENCODING))
+        cipher = AES.new(key, AES.MODE_CBC, iv=iv.encode(encoding=ENCODING))
         decrypt_bytes = cipher.decrypt(enc)
         return str(decrypt_bytes.decode(ENCODING)).replace('\n', '')
 
@@ -86,3 +94,5 @@ if __name__ == '__main__':
     print(token)
     result = JwtMaster.decrypt(token)
     print(result)
+    print(md5('123'))
+    print(md5_16('123'))
