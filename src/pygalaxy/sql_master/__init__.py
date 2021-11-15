@@ -44,10 +44,10 @@ class SQLMaster(object):
             try:
                 cursor.execute(sql)
                 self.connection.commit()
-                print("[SQLMaster] - execute success... [%s]" % sql)
+                print("[SQLMaster] - execute success...")
                 return True
             except Exception as e:
-                print("[SQLMaster] - execute failure... [%s]" % sql)
+                print("[SQLMaster] - execute failure...")
                 print("[SQLMaster] - %s" % repr(e))
                 return False
             finally:
@@ -69,12 +69,12 @@ class SQLMaster(object):
                 cursor.execute(sql)
                 result_rows = cursor.fetchall()
                 if result_rows is None or len(result_rows) <= 0:
-                    print("[SQLMaster] - execute failure... [%s] no result found" % sql)
+                    print("[SQLMaster] - execute failure... no result found")
                     return None
-                print("[SQLMaster] - execute success... [%s]" % sql)
+                print("[SQLMaster] - execute success...")
                 return result_rows
             except Exception as e:
-                print("[SQLMaster] - execute failure... [%s]" % sql)
+                print("[SQLMaster] - execute failure...")
                 print("[SQLMaster] - %s" % repr(e))
                 return None
             finally:
