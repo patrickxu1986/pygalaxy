@@ -7,7 +7,7 @@ Github: https://github.com/patrickxu1986/pygalaxy
 #### Dependence
 
 ```python
-pip3 install -r requirements.txt
+requirements.txt
 ```
 
 #### Use
